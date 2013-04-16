@@ -1,0 +1,2 @@
+oozie-maven-archetype
+=====================
