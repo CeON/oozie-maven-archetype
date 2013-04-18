@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archetype-descriptor name="oozie-app">
+	<fileSets>
+		<fileSet filtered="true" encoding="UTF-8">
+			<directory>src/main</directory>
+			<includes>
+				<include>*/**</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+</archetype-descriptor>
