@@ -16,12 +16,12 @@
     <start to="java-node"/>
     <action name="java-node">
         <java>
-            <job-tracker>${jobTracker}</job-tracker>
-            <name-node>${nameNode}</name-node>
+            <job-tracker>${esc.d}{jobTracker}</job-tracker>
+            <name-node>${esc.d}{nameNode}</name-node>
             <configuration>
                 <property>
                     <name>mapred.job.queue.name</name>
-                    <value>${queueName}</value>
+                    <value>${esc.d}{queueName}</value>
                 </property>
             </configuration>
             <main-class>org.apache.oozie.example.DemoJavaMain</main-class>
@@ -32,7 +32,7 @@
         <error to="fail"/>
     </action>
     <kill name="fail">
-        <message>Java failed, error message[${wf:errorMessage(wf:lastErrorNode())}]</message>
+        <message>Java failed, error message[${esc.d}{wf:errorMessage(wf:lastErrorNode())}]</message>
     </kill>
     <end name="end"/>
 </workflow-app>
