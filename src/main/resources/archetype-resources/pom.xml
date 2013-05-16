@@ -19,4 +19,11 @@
 			</plugin>
 		</plugins>
 	</build>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>icm</id>
+			<name>ICM repository</name>
+			<url>http://maven.icm.edu.pl/artifactory/maven-2_3-repos</url>
+		</pluginRepository>
+	</pluginRepositories>
 </project>
