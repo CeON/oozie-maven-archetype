@@ -14,7 +14,7 @@
 			<plugin>
 				<groupId>pl.edu.icm.maven</groupId>
 				<artifactId>oozie-maven-plugin</artifactId>
-				<version>1.0-SNAPSHOT</version>
+				<version>1.1</version>
 				<extensions>true</extensions>
 			</plugin>
 		</plugins>
@@ -24,6 +24,13 @@
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.7</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>pl.edu.icm.oozie</groupId>
+			<artifactId>oozie-runner</artifactId>
+			<version>1.2-SNAPSHOT</version>
+			<scope>test</scope>
 		</dependency>
 	</dependencies>
 	<pluginRepositories>
@@ -33,4 +40,11 @@
 			<url>http://maven.icm.edu.pl/artifactory/maven-2_3-repos</url>
 		</pluginRepository>
 	</pluginRepositories>
+	<repositories>
+		<repository>
+			<id>icm</id>
+			<name>ICM repository</name>
+			<url>http://maven.icm.edu.pl/artifactory/maven-2_3-repos</url>
+		</repository>
+	</repositories>
 </project>

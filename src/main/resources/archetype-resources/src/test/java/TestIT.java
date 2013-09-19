@@ -1,12 +1,10 @@
 package $package;
 
-import static org.junit.Assert.fail;
-
-import org.junit.After;
-import org.junit.AfterClass;
-import org.junit.Before;
-import org.junit.BeforeClass;
-import org.junit.Test;
+import java.io.File;
+import java.io.IOException;
+import static org.junit.Assert.assertTrue;
+import org.junit.*;
+import pl.edu.icm.oozierunner.OozieRunner;
 
 public class TestIT {
 
@@ -27,7 +25,14 @@ public class TestIT {
 	}
 
 	@Test
-	public void test() {
-		fail("Not yet implemented");
+	public void test() throws IOException {
+		OozieRunner or = new OozieRunner();
+		File workflowOutputData = or.run();
+
+		assertTrue(workflowOutputData.exists());
+		assertTrue(workflowOutputData.isDirectory());
+		assertTrue(workflowOutputData.listFiles().length > 0);
+
+		// check if data in workflowOutputData directory is correct
 	}
 }
